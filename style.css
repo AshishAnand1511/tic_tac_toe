@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #222;
+}
+.gameContainer{
+    display: flex;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 5vw;
+    justify-content: center;
+    margin-top: 5vw;
+}
+
+.container{
+    height: 30vw;
+    width: 30vw;
+    align-items: center;
+    /* background-color: grey; */
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    flex-wrap: wrap;
+}
+.box{
+    /* background-color: green; */
+    height: 100%;
+    border: .2vw solid salmon;
+    border-radius: 10px;
+    display: flex;
+    font-size: 3vw;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.box:hover{
+    background-color: #f3f3f313;
+    
+}
+.box:nth-child(1),.box:nth-child(2),.box:nth-child(3){
+    border-top: none;
+}
+.box:nth-child(3n + 1 ){
+    border-left: none;
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(n + 7){
+    border-bottom: none;
+}
+#reset{
+    width: 10vw;
+    height: 4vw;
+    color: #fff;
+    font-size: 1.5vw;
+    background-color: salmon;
+    border: none;
+    border-radius: 2vw;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+#reset2{
+    width: 10vw;
+    height: 4vw;
+    color: #fff;
+    font-size: 1.5vw;
+    background-color: salmon;
+    border: none;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+.gameInfo>div{
+    margin-bottom: 10vw;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.gameInfo>div h1{
+    font-size: 3vw;
+}
+.info{
+    font-size: 2vw;
+}
+.imgbox{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    background-color: #000000dd;
+    display: none;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.imgbox h1{
+    position: absolute;
+    left: 60%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+}
+
+
+@media (max-width:600px) {
+.gameContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20vw;
+}
+
+.container{
+    height: 70vw;
+    width: 70vw;
+    align-items: center;
+    /* background-color: grey; */
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    flex-wrap: wrap;
+}
+.box{
+    /* background-color: green; */
+    height: 100%;
+    border: .2vw solid salmon;
+    border-radius: 10px;
+    display: flex;
+    font-size: 7vw;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.gameInfo>div{
+    margin-bottom: 10vw;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+.gameInfo>div h1{
+    font-size: 5vw;
+}
+.info{
+    font-size: 5vw;
+}
+.imgbox{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    background-color: #000000dd;
+    display: none;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+.imgbox h1{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#reset{
+    width: 25vw;
+    height: 8vw;
+    color: #fff;
+    font-size: 2.5vw;
+    background-color: salmon;
+    border: none;
+    border-radius: 2vw;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+#reset2{
+    width: 25vw;
+    height: 8vw;
+    color: #fff;
+    font-size: 2.5vw;
+    background-color: salmon;
+    border: none;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+
+}
